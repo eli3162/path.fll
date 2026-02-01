@@ -140,7 +140,7 @@ export class GeneralConfigImpl implements GeneralConfig {
   relativeCoords: boolean = true;
   @IsIn(getNamedCoordinateSystems().map(s => s.name))
   @Expose()
-  coordinateSystem: string = "VEX Gaming Positioning System";
+  coordinateSystem: string = "FLL Unearthed Positioning System";
   @Exclude()
   private format_: FormatWithExportCode;
 

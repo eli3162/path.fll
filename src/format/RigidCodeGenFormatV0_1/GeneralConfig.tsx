@@ -150,7 +150,7 @@ export class GeneralConfigImpl implements GeneralConfig {
     getDefaultBuiltInFieldImage().getSignatureAndOrigin();
   @IsIn(getNamedCoordinateSystems().map(s => s.name))
   @Expose()
-  coordinateSystem: string = "VEX Gaming Positioning System";
+  coordinateSystem: string = "FLL Unearthed Positioning System";
   @IsEnum(HeadingOutputType)
   @Expose()
   headingOutputType: HeadingOutputType = HeadingOutputType.Absolute;

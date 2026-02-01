@@ -112,8 +112,8 @@ export interface NamedCoordinateSystem extends CoordinateSystem {
 export function getNamedCoordinateSystems(): NamedCoordinateSystem[] {
   return [
     {
-      name: "VEX Gaming Positioning System",
-      description: "The standard coordinate system defined by VEX Robotics.",
+      name: "FLL Unearthed Positioning System",
+      description: "A coordinate system for the FLL Unearthed map",
       previewImageUrl: "static/coordinate-system-preview-vex-gps.png",
       axisAnchor: AxisAnchor.Default,
       axisRotation: AxisRotation.XEastYNorth,
