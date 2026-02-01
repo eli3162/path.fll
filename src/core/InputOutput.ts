@@ -201,7 +201,7 @@ async function choiceSave(): Promise<boolean> {
 
 export class IOFileHandle {
   public isNameSet: boolean = false;
-  constructor(public handle: FileSystemFileHandle | null = null, public name: string = "path.jerryio.txt") {
+  constructor(public handle: FileSystemFileHandle | null = null, public name: string = "path.fll.txt") {
     makeAutoObservable(this);
   }
 }

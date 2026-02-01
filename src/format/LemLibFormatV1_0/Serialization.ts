@@ -99,10 +99,10 @@ export namespace LemLibV1_0 {
     });
 
     // The first 4 bytes of metadata is the pointer to the end of the body
-    // The reader will use this pointer to skip the body and read the PATH.JERRYIO-DATA metadata
+    // The reader will use this pointer to skip the body and read the path.fll-DATA metadata
     const sizeOfBody = buffer.writeOffset - bodyBeginIdx;
     buffer.writeUInt32LE(sizeOfBody, metadataStartIdx);
-    buffer.writeStringNT("#PATH.JERRYIO-DATA");
+    buffer.writeStringNT("#path.fll-DATA");
     buffer.writeString(JSON.stringify(pathFileData));
   }
 
@@ -124,7 +124,7 @@ export namespace LemLibV1_0 {
 
     buffer.readOffset = bodyBeginIdx + sizeOfBody;
     const signature = buffer.readStringNT();
-    if (signature !== "#PATH.JERRYIO-DATA") return undefined;
+    if (signature !== "#path.fll-DATA") return undefined;
 
     try {
       const pathFileData = JSON.parse(buffer.readString());

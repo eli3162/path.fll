@@ -30,7 +30,7 @@ export class PathDotJerryioFormatV0_1 implements Format {
   }
 
   getName(): string {
-    return "path.jerryio v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
+    return "path.fll v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
   }
 
   getDescription(): string {
@@ -93,7 +93,7 @@ export class PathDotJerryioFormatV0_1 implements Format {
       }
     }
 
-    fileContent += "#PATH.JERRYIO-DATA " + JSON.stringify(app.exportPDJData());
+    fileContent += "#path.fll-DATA " + JSON.stringify(app.exportPDJData());
 
     return new TextEncoder().encode(fileContent);
   }

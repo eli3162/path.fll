@@ -101,7 +101,7 @@ export interface Format {
    *
    * @throws Error if an error occurs during parsing the file
    * @param buffer the path file buffer in ArrayBuffer
-   * @returns the PATH.JERRYIO-DATA in JSON format or undefined if PATH.JERRYIO-DATA is not found
+   * @returns the path.fll-DATA in JSON format or undefined if path.fll-DATA is not found
    */
   importPDJDataFromFile(buffer: ArrayBuffer): Record<string, any> | undefined;
 
@@ -209,8 +209,8 @@ const convertFromV0_7_0ToV0_8_0: PathFileDataConverter = {
   convert: (data: Record<string, any>): void => {
     if (data.format === "LemLib v0.4.x (inch, byte-voltage)") {
       data.format = "LemLib v0.5";
-    } else if (data.format === "path.jerryio v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)") {
-      data.format = "path.jerryio v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
+    } else if (data.format === "path.fll v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)") {
+      data.format = "path.fll v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
     } else if (data.format === "LemLib Odom Code Gen v0.4.x (inch)") {
       data.format = "LemLib Odom Code Gen v0.4";
     } else if (data.format === "LemLib v1.0.0 (mm, m/s)") {
@@ -272,18 +272,18 @@ export function convertPathFileData(data: Record<string, any>): boolean {
 }
 
 /**
- * Import the PATH.JERRYIO data from a text file. It is a common function for all formats with text path file.
+ * Import the path.fll data from a text file. It is a common function for all formats with text path file.
  *
  * @throws Error if the file format is incorrect, for example, the json is not valid
- * @param buffer the PATH.JERRYIO data in JSON format
+ * @param buffer the path.fll data in JSON format
  * @returns the path file data or undefined if the file path file data is not found
  */
 export function importPDJDataFromTextFile(buffer: ArrayBuffer): Record<string, any> | undefined {
   const fileContent = new TextDecoder().decode(buffer);
-  const lineWithPathDotJerryioData = fileContent.split("\n").find(line => line.startsWith("#PATH.JERRYIO-DATA"));
+  const lineWithPathDotJerryioData = fileContent.split("\n").find(line => line.startsWith("#path.fll-DATA"));
   if (lineWithPathDotJerryioData === undefined) return undefined;
 
-  const pathFileDataInString = lineWithPathDotJerryioData.substring("#PATH.JERRYIO-DATA".length).trim();
+  const pathFileDataInString = lineWithPathDotJerryioData.substring("#path.fll-DATA".length).trim();
   const data = JSON.parse(pathFileDataInString);
 
   return data;

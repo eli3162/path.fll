@@ -109,7 +109,7 @@ export class LemLibOdomGeneratorFormatV0_4 implements Format {
 
     fileContent += "\n";
 
-    fileContent += "#PATH.JERRYIO-DATA " + JSON.stringify(app.exportPDJData());
+    fileContent += "#path.fll-DATA " + JSON.stringify(app.exportPDJData());
 
     return new TextEncoder().encode(fileContent);
   }

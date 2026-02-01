@@ -13,7 +13,7 @@ import { APP_VERSION_STRING } from "../Version";
 
 const logger = Logger("Clipboard");
 
-const MIME_TYPE = `application/x-clipboard-path.jerryio.com-${APP_VERSION_STRING}`;
+const MIME_TYPE = `application/x-clipboard-path.fll.com-${APP_VERSION_STRING}`;
 
 type ClipboardMessageType = "SYNC_DATA" | "COPY_PATHS" | "COPY_CONTROLS";
 

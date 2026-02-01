@@ -257,7 +257,7 @@ export class LemLibFormatV0_4 implements Format {
       }
     }
 
-    fileContent += "#PATH.JERRYIO-DATA " + JSON.stringify(app.exportPDJData());
+    fileContent += "#path.fll-DATA " + JSON.stringify(app.exportPDJData());
 
     return new TextEncoder().encode(fileContent);
   }

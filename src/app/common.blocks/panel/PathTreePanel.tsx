@@ -35,7 +35,7 @@ import DOMPurify from "dompurify";
 
 import "./PathTreePanel.scss";
 
-const MIME_TYPE = `application/x-item-uid-path.jerryio.com-${APP_VERSION_STRING}`;
+const MIME_TYPE = `application/x-item-uid-path.fll.com-${APP_VERSION_STRING}`;
 
 function touchItem(
   variables: PathTreeVariables,

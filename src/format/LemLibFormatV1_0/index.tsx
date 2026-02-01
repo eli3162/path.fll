@@ -126,7 +126,7 @@ export class LemLibFormatV1_0 implements Format {
       buffer.readOffset = bodyBeginIdx + sizeOfBody;
       const signature = buffer.readStringNT();
 
-      if (signature !== "#PATH.JERRYIO-DATA") return undefined;
+      if (signature !== "#path.fll-DATA") return undefined;
     } catch (e) {
       return undefined;
     }

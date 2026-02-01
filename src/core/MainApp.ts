@@ -114,9 +114,9 @@ export class MainApp {
       () => this.mountingFile.handle,
       handle => {
         if (handle !== null) {
-          document.title = `${handle.name} | PATH.JERRYIO`;
+          document.title = `${handle.name} | path.fll`;
         } else {
-          document.title = "PATH.JERRYIO";
+          document.title = "path.fll";
         }
       }
     );

@@ -125,7 +125,7 @@ export class LemLibTarballFormatV0_5 implements Format {
             LemLib Tarball
           </a>{" "}
           depot together with LemLib. Please see the{" "}
-          <a href="https://docs.path.jerryio.com/docs/formats/LemLibTarballFormatV0_5" target="_blank" rel="noreferrer">
+          <a href="https://docs.path.fll.com/docs/formats/LemLibTarballFormatV0_5" target="_blank" rel="noreferrer">
             documentation
           </a>{" "}
           for more information.
@@ -286,7 +286,7 @@ export class LemLibTarballFormatV0_5 implements Format {
       fileContent += `endData\n`;
     }
 
-    fileContent += "#PATH.JERRYIO-DATA " + JSON.stringify(app.exportPDJData());
+    fileContent += "#path.fll-DATA " + JSON.stringify(app.exportPDJData());
 
     if (ignoredPaths.length > 0) {
       enqueueInfoSnackbar(
