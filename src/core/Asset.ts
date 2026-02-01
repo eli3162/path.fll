@@ -427,96 +427,10 @@ const builtInAssets: FieldImageAsset<FieldImageOriginType>[] = [
   // 3683 = 145*2.54*10 ~= 3676.528, the size of the field perimeter in Fusion 360
   // Field image file name: Competition-Season-Setup-View-Theme@SemVer.png
   createBuiltInFieldImage(
-    "V5RC 2026 - Push Back",
+    "FLL Unearthed 2025 - 2026 Competition Field",
     3690,
-    "/precache/V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "V5RC-PushBack-H2H-TopDownHighlighted-TileColor66_71"
-  ),
-  createBuiltInFieldImage(
-    "V5RC 2026 - Push Back (Skills)",
-    3690,
-    "/static/V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "V5RC-PushBack-Skills-TopDownHighlighted-TileColor66_71"
-  ),
-  createBuiltInFieldImage(
-    "VURC 2026 - Push Back",
-    3690,
-    "/static/VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71@0.1+2000px.png",
-    "VURC-PushBack-H2H-TopDownHighlighted-TileColor66_71"
-  ),
-  createBuiltInFieldImage(
-    "V5RC 2025 - High Stakes",
-    3690,
-    "/static/V5RC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png"
-  ),
-  createBuiltInFieldImage(
-    "V5RC 2025 - High Stakes (Skills)",
-    3690,
-    "/static/V5RC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png"
-  ),
-  createBuiltInFieldImage(
-    "VURC 2025 - High Stakes",
-    3690,
-    "/static/VURC-HighStakes-H2H-TopDownHighlighted-TileColor66_71@4.0+2000px.png"
-  ),
-  createBuiltInFieldImage(
-    "VURC 2025 - High Stakes (Skills)",
-    3690,
-    "/static/VURC-HighStakes-Skills-TopDownHighlighted-TileColor66_71@4.0+2000px.png"
-  ),
-  createBuiltInFieldImage(
-    "V5RC 2024 - Over Under",
-    3690,
-    "/static/V5RC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "VRC 2024 - Over Under"
-  ),
-  createBuiltInFieldImage(
-    "V5RC 2024 - Over Under (Skills)",
-    3690,
-    "/static/V5RC-OverUnder-Skills-TopDown-TileColor66_71@4.0+2000px.png",
-    "VRC 2024 - Over Under (Skill)"
-  ),
-  createBuiltInFieldImage(
-    "VURC 2024 - Over Under",
-    3690,
-    "/static/VURC-OverUnder-H2H-TopDown-TileColor66_71@4.0+2000px.png",
-    "VRC 2024 - Over Under (VEX U)"
-  ),
-  createBuiltInFieldImage(
-    "V5RC Field Perimeter",
-    3690,
-    "/precache/V5RC-FieldPerimeter-12ft12ft-TopDown-TileColor66_71@1.0.png",
-    "VRC Field Perimeter"
-  ),
-  createBuiltInFieldImage(
-    "VIQRC 2026 - Mix & Match",
-    1920,
-    "/static/VIQRC-MixAndMatch-H2H-TopDown-Original@0.1+2000px.png",
-    "VIQRC-MixAndMatch-H2H-TopDown-Original"
-  ),
-  createBuiltInFieldImage(
-    "VIQRC 2026 - Mix & Match (Skills)",
-    1920,
-    "/static/VIQRC-MixAndMatch-Skills-TopDown-Original@0.1+2000px.png",
-    "VIQRC-MixAndMatch-Skills-TopDown-Original"
-  ),
-  createBuiltInFieldImage(
-    "VIQRC 2025 - Rapid Relay",
-    1920,
-    "/static/VIQRC-RapidRelay-All-TopDown-Original+2000px.png",
-    "VIQC 2025 - Rapid Relay"
-  ),
-  createBuiltInFieldImage(
-    "VIQRC 2024 - Full Volume",
-    1920,
-    "/static/VIQRC-FullVolume-All-TopDown-Original+2000px.png",
-    "VIQC 2024 - Full Volume"
-  ),
-  createBuiltInFieldImage(
-    "VIQC Field Perimeter 8ft×6ft",
-    1920,
-    "/static/VIQRC-FieldPerimeter-8ft6ft-TopDown-Original+2000px.png",
-    "VIQC Field Perimeter 8ft×6ft"
+    "/precache/map.png",
+    "map"
   )
 ];
 
