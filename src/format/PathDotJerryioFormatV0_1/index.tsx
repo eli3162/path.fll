@@ -30,11 +30,11 @@ export class PathDotJerryioFormatV0_1 implements Format {
   }
 
   getName(): string {
-    return "path.jerryio v0.1";
+    return "path.jerryio v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
   }
 
   getDescription(): string {
-    return "The default and official format for path planning purposes and custom library. Output is in cm, rpm.";
+    return "The default and official format for path planning purposes and custom library - Retrofitted for FLL. Output is in cm, rpm.";
   }
 
   register(app: MainApp, ui: UserInterface): void {

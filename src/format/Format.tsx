@@ -209,8 +209,8 @@ const convertFromV0_7_0ToV0_8_0: PathFileDataConverter = {
   convert: (data: Record<string, any>): void => {
     if (data.format === "LemLib v0.4.x (inch, byte-voltage)") {
       data.format = "LemLib v0.5";
-    } else if (data.format === "path.jerryio v0.1.x (cm, rpm)") {
-      data.format = "path.jerryio v0.1";
+    } else if (data.format === "path.jerryio v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)") {
+      data.format = "path.jerryio v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
     } else if (data.format === "LemLib Odom Code Gen v0.4.x (inch)") {
       data.format = "LemLib Odom Code Gen v0.4";
     } else if (data.format === "LemLib v1.0.0 (mm, m/s)") {

@@ -428,7 +428,7 @@ const builtInAssets: FieldImageAsset<FieldImageOriginType>[] = [
   // Field image file name: Competition-Season-Setup-View-Theme@SemVer.png
   createBuiltInFieldImage(
     "FLL Unearthed 2025 - 2026 Competition Field",
-    3690,
+    2360,
     "/precache/map.png",
     "map"
   )

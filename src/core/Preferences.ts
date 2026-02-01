@@ -11,7 +11,7 @@ export class Preferences {
   public isExperimentalFeaturesEnabled: boolean = false;
   public themeType: AppThemeType = AppThemeType.Dark;
   public layoutType: LayoutType = LayoutType.Classic;
-  public lastSelectedFormat: string = "path.jerryio v0.1.x (cm, rpm)";
+  public lastSelectedFormat: string = "path.jerryio v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
 
   // Not in local storage
   public isSpeedCanvasVisible: boolean = true; // In classic layout only
