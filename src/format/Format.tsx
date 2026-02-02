@@ -207,7 +207,7 @@ const convertFromV0_6_0ToV0_7_0: PathFileDataConverter = {
 const convertFromV0_7_0ToV0_8_0: PathFileDataConverter = {
   version: new Range("~0.7"),
   convert: (data: Record<string, any>): void => {
-    } if (data.format === "path.fll v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)") {
+    if (data.format === "path.fll v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)") {
       data.format = "path.fll v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
     } else if (data.format === "LemLib Odom Code Gen v0.4.x (inch)") {
       data.format = "LemLib Odom Code Gen v0.4";
