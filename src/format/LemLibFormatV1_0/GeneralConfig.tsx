@@ -12,10 +12,10 @@ import { getNamedCoordinateSystems } from "@src/core/CoordinateSystem";
 export class GeneralConfigImpl implements GeneralConfig {
   @IsPositive()
   @Expose()
-  robotWidth: number = 300;
+  robotWidth: number = 150;
   @IsPositive()
   @Expose()
-  robotHeight: number = 300;
+  robotHeight: number = 90;
   @IsBoolean()
   @Expose()
   robotIsHolonomic: boolean = false;
