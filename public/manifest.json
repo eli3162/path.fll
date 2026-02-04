@@ -1,7 +1,7 @@
 {
   "short_name": "path.fll",
   "name": "path.fll",
-  "description": "The best path editor in the VEX Robotics Competition for designing skills routes and generating path files.",
+  "description": "The best and only path editor in the First Lego League Robotics Competition for designing autonomous paths, codeless programs that complete tasks in curves! Forked from JERRYIO.PATH, a popular VRC path editor!",
   "icons": [
     {
       "src": "precache/favicon.ico",

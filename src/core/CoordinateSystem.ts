@@ -123,48 +123,6 @@ export function getNamedCoordinateSystems(): NamedCoordinateSystem[] {
       headingDirection: HeadingDirection.Clockwise,
       originAnchor: OriginAnchor.FieldCenter,
       originOffset: { x: 0, y: 0 }
-    },
-    {
-      name: "Cartesian Plane",
-      description:
-        "A standard Cartesian coordinate system. Heading is measured in degrees counterclockwise from the positive x-axis.",
-      previewImageUrl: "static/coordinate-system-preview-cartesian-plane.png",
-      axisAnchor: AxisAnchor.Default,
-      axisRotation: AxisRotation.XEastYNorth,
-      yAxisFlip: YAxisFlip.NoFlip,
-      headingAnchor: HeadingAnchor.Default,
-      headingRotation: HeadingRotation.East,
-      headingDirection: HeadingDirection.CounterClockwise,
-      originAnchor: OriginAnchor.FieldCenter,
-      originOffset: { x: 0, y: 0 }
-    },
-    {
-      name: "Path-Based Coordinates",
-      description:
-        "This coordinate system is relative to the beginning of a path. The origin is set at the path's starting point, and the axes are aligned to the field's default orientation.",
-      previewImageUrl: "static/coordinate-system-preview-path-relative.png",
-      axisAnchor: AxisAnchor.Default,
-      axisRotation: AxisRotation.XEastYNorth,
-      yAxisFlip: YAxisFlip.NoFlip,
-      headingAnchor: HeadingAnchor.Default,
-      headingRotation: HeadingRotation.North,
-      headingDirection: HeadingDirection.Clockwise,
-      originAnchor: OriginAnchor.PathBeginning,
-      originOffset: { x: 0, y: 0 }
-    },
-    {
-      name: "Path-Based Strict Coordinates",
-      description:
-        "A strict version of the Path-Based Coordinates system. The origin and axes are both anchored to the beginning of the path.",
-      previewImageUrl: "static/coordinate-system-preview-path-relative-strict-mode.png",
-      axisAnchor: AxisAnchor.PathBeginning,
-      axisRotation: AxisRotation.XEastYNorth,
-      yAxisFlip: YAxisFlip.NoFlip,
-      headingAnchor: HeadingAnchor.PathBeginning,
-      headingRotation: HeadingRotation.North,
-      headingDirection: HeadingDirection.Clockwise,
-      originAnchor: OriginAnchor.PathBeginning,
-      originOffset: { x: 0, y: 0 }
     }
   ];
 }
