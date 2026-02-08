@@ -452,8 +452,8 @@ export class MainApp {
    * @throws Error if the file can not be exported
    * @returns the path file buffer in ArrayBuffer
    */
-  exportFile(): ArrayBufferView<ArrayBufferLike> {
-    return this.format.exportFile();
+  async exportFile(): Promise<ArrayBufferView<ArrayBufferLike>> {
+    return await this.format.exportFile();
   }
 }
 

@@ -279,7 +279,7 @@ export class RigidCodeGenFormatV0_1 implements Format {
     return rtn;
   }
 
-  exportFile(): ArrayBufferView<ArrayBufferLike> {
+  async exportFile(): Promise<ArrayBufferView<ArrayBufferLike>> {
     const { app } = getAppStores();
 
     let fileContent = this.exportCode();

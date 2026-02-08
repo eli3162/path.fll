@@ -105,7 +105,7 @@ export interface Format {
    * @throws Error if the file can not be exported
    * @returns the path file buffer in ArrayBuffer
    */
-  exportFile(): ArrayBufferView<ArrayBufferLike>;
+  exportFile(): Promise<ArrayBufferView<ArrayBufferLike>>;
 }
 
 export function getAllGeneralFormats(): Format[] {

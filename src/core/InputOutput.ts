@@ -69,11 +69,11 @@ async function fileNameConfirm(description: string, callback: () => void): Promi
   });
 }
 
-function exportFile(): ArrayBufferView<ArrayBufferLike> | undefined {
+async function exportFile(): Promise<ArrayBufferView<ArrayBufferLike> | undefined> {
   const { app } = getAppStores();
 
   try {
-    return app.exportFile();
+    return await app.exportFile();
   } catch (err) {
     enqueueErrorSnackbar(logger, err);
     return undefined;
@@ -227,7 +227,7 @@ export async function onSave(): Promise<boolean> {
 
   if (app.mountingFile.handle === null) return onSaveAs();
 
-  const output = exportFile();
+  const output = await exportFile();
   if (output === undefined) return false;
 
   if (await writeFile(output)) {
@@ -243,7 +243,7 @@ export async function onSaveAs(): Promise<boolean> {
 
   if (isFileSystemSupported() === false) return onDownloadAs(true);
 
-  const output = exportFile();
+  const output = await exportFile();
   if (output === undefined) return false;
 
   if (!(await choiceSave())) return false;
@@ -291,7 +291,7 @@ export async function onDownload(fallback: boolean = false): Promise<boolean> {
 
   if (app.mountingFile.isNameSet === false) return onDownloadAs(fallback);
 
-  const output = exportFile();
+  const output = await exportFile();
   if (output === undefined) return false;
 
   downloadFile(output);
@@ -303,7 +303,7 @@ export async function onDownload(fallback: boolean = false): Promise<boolean> {
  * @returns true if the file is downloaded, false otherwise
  */
 export async function onDownloadAs(fallback: boolean = false): Promise<boolean> {
-  const output = exportFile();
+  const output = await exportFile();
   if (output === undefined) return false;
 
   if (fallback) {

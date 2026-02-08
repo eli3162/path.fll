@@ -102,7 +102,7 @@ export class LemLibOdomGeneratorFormatV0_4 implements Format {
     return importPDJDataFromTextFile(buffer);
   }
 
-  exportFile(): ArrayBufferView<ArrayBufferLike> {
+  async exportFile(): Promise<ArrayBufferView<ArrayBufferLike>> {
     const { app } = getAppStores();
 
     let fileContent = this.exportCode();

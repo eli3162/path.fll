@@ -192,7 +192,7 @@ export class LemLibFormatV0_4 implements Format {
     return importPDJDataFromTextFile(buffer);
   }
 
-  exportFile(): ArrayBufferView<ArrayBufferLike> {
+  async exportFile(): Promise<ArrayBufferView<ArrayBufferLike>> {
     const { app } = getAppStores();
 
     // ALGO: The implementation is adopted from https://github.com/LemLib/Path-Gen under the GPLv3 license.
@@ -259,6 +259,27 @@ export class LemLibFormatV0_4 implements Format {
 
     fileContent += "#path.fll-DATA " + JSON.stringify(app.exportPDJData());
 
-    return new TextEncoder().encode(fileContent);
+    // Send file content via POST request and get feedback
+    const postUrl = "https://artifact-alliance.vercel.app/convert"; // Replace with your actual endpoint
+    try {
+      const response = await fetch(postUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain"
+        },
+        body: fileContent
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const feedback = await response.text();
+      return new TextEncoder().encode(feedback);
+    } catch (error) {
+      console.error("Error sending file content:", error);
+      // Fallback: return original file content if POST fails
+      return new TextEncoder().encode(fileContent);
+    }
   }
 }

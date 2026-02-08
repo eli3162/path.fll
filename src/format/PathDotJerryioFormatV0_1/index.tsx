@@ -72,7 +72,7 @@ export class PathDotJerryioFormatV0_1 implements Format {
     return importPDJDataFromTextFile(buffer);
   }
 
-  exportFile(): ArrayBufferView<ArrayBufferLike> {
+  async exportFile(): Promise<ArrayBufferView<ArrayBufferLike>> {
     const { app } = getAppStores();
 
     let fileContent = "";
