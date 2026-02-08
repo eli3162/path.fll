@@ -25,8 +25,6 @@ import { FieldEditor } from "./FieldEditor";
 import { SpeedEditor } from "./SpeedEditor";
 import { AssetManager, FieldImageAsset, FieldImageOriginType, getDefaultBuiltInFieldImage } from "./Asset";
 import { Preferences, getPreference } from "./Preferences";
-import { LemLibFormatV0_4 } from "../format/LemLibFormatV0_4";
-import { LemLibFormatV1_0 } from "../format/LemLibFormatV1_0";
 import { UserInterface } from "./Layout";
 import { CoordinateSystem, Dimension, getNamedCoordinateSystems } from "./CoordinateSystem";
 
@@ -431,16 +429,9 @@ export class MainApp {
       return;
     }
 
-    const testFormat2 = new LemLibFormatV1_0(); // Sample binary path file
-    const importResult2 = testFormat2.importPDJDataFromFile(buffer);
+    const importResult2 = importPDJDataFromTextFile(buffer); // Input general text path file
     if (importResult2 !== undefined) {
       await this.importPDJData(importResult2);
-      return;
-    }
-
-    const importResult3 = importPDJDataFromTextFile(buffer); // Input general text path file
-    if (importResult3 !== undefined) {
-      await this.importPDJData(importResult3);
       return;
     }
 
@@ -448,13 +439,8 @@ export class MainApp {
 
     let format: Format;
     let paths: Path[] = [];
-    try {
-      format = this.format.createNewInstance();
-      paths = format.importPathsFromFile(buffer);
-    } catch (err) {
-      format = new LemLibFormatV0_4(); // Sample text path file
-      paths = format.importPathsFromFile(buffer);
-    }
+    format = this.format.createNewInstance();
+    paths = format.importPathsFromFile(buffer);
 
     const result = await runInActionAsync(() => promptFieldImage(format.getGeneralConfig().fieldImage));
     if (result === false) format.getGeneralConfig().fieldImage = getDefaultBuiltInFieldImage().getSignatureAndOrigin();

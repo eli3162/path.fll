@@ -30,11 +30,11 @@ export class PathDotJerryioFormatV0_1 implements Format {
   }
 
   getName(): string {
-    return "path.fll v0.1.x - Retrofitted for First Lego League - Units: (cm, rpm)";
+    return "Artifact Alliance Track X Robot";
   }
 
   getDescription(): string {
-    return "The default and official format for path planning purposes and custom library - Retrofitted for FLL. Output is in cm, rpm.";
+    return "Use https://artifact-alliance.vercel.app/convert to convert these paths to JSON, where they can be integrated into python programs.";
   }
 
   register(app: MainApp, ui: UserInterface): void {

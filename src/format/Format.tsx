@@ -5,14 +5,10 @@ import { APP_VERSION, MainApp } from "@core/MainApp";
 import { Range } from "semver";
 import { UserInterface } from "@core/Layout";
 import { UnitOfLength } from "@core/Unit";
-import { LemLibFormatV0_4 } from "./LemLibFormatV0_4";
 import { PathDotJerryioFormatV0_1 } from "./PathDotJerryioFormatV0_1";
-import { LemLibOdomGeneratorFormatV0_4 } from "./LemLibOdomGeneratorFormatV0_4";
-import { LemLibFormatV1_0 } from "./LemLibFormatV1_0";
 import { isExperimentalFeaturesEnabled } from "@core/Preferences";
 import { RigidCodeGenFormatV0_1 } from "./RigidCodeGenFormatV0_1";
 import { MoveToPointCodeGenFormatV0_1 } from "./MoveToPointCodeGenFormatV0_1";
-import { LemLibTarballFormatV0_5 } from "./LemLibTarballFormatV0_5";
 
 export interface Format {
   isInit: boolean;
@@ -113,16 +109,16 @@ export interface Format {
 }
 
 export function getAllGeneralFormats(): Format[] {
-  return [new LemLibFormatV0_4(), new LemLibTarballFormatV0_5(), new PathDotJerryioFormatV0_1()];
+  return [new PathDotJerryioFormatV0_1()];
 }
 
 export function getAllDeprecatedFormats(): Format[] {
-  return [new LemLibOdomGeneratorFormatV0_4()];
+  return [];
 }
 
 export function getAllExperimentalFormats(): Format[] {
   if (!isExperimentalFeaturesEnabled()) return [];
-  return [new LemLibFormatV1_0(), new RigidCodeGenFormatV0_1(), new MoveToPointCodeGenFormatV0_1()];
+  return [new RigidCodeGenFormatV0_1(), new MoveToPointCodeGenFormatV0_1()];
 }
 
 export function getAllFormats(): Format[] {
